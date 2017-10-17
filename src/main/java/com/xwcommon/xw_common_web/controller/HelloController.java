@@ -24,8 +24,15 @@ public class HelloController {
         System.out.println("tsttttttt乾坤tttttttttttyyyyyyy1777111");
         logger.error("哈哈");
         logger.info("qinak");
-        User user = userService.selectByPrimaryKey(1);
-        System.out.println(user.toString());
+        User user = null;
+        try {
+            user = userService.selectByPrimaryKey(1);
+            System.out.println(user.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("有异常");
+            return "hello fail qiankun";
+        }
         return "hello,qiankun";
     }
 }

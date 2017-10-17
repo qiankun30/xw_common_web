@@ -24,6 +24,8 @@ public class UserService {
             int i = 3/0;
         }catch (Exception e){
             System.out.println("异常点");
+            /*手动抛异常 为了事物*/
+            throw  new RuntimeException();
         }
        return userMapper.selectByPrimaryKey(1);
     };
