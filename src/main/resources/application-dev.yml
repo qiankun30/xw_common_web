@@ -1,0 +1,35 @@
+server:
+   port: 8044
+##添加那个目录的文件需要restart
+spring :
+    devtools:
+          restartadditional-paths: src/main/java
+    ##排除那个目录的文件不需要restart
+    ##spring.devtools.restart.exclude=static/**,public/**
+    # 数据连接池
+    datasource:
+                url: jdbc:mysql://192.168.100.11:3306/guns?useUnicode=true&cracterEncoding=utf8&zeroDateTimeBevior=convertToNull
+                username: root
+                password: like
+                type: com.alibaba.druid.pool.DruidDataSource
+                driver-class-name: com.mysql.jdbc.Driver
+                filters: stat
+                maxActive: 20
+                initialSize: 1
+                maxWait: 60000
+                minIdle: 1
+                timeBetweenEvictionRunsMillis: 60000
+                minEvictableIdleTimeMillis: 300000
+                validationQuery: select 'x'
+                testWhileIdle: true
+                testOnBorrow: false
+                testOnReturn: false
+                poolPreparedStatements: true
+                maxOpenPreparedStatements: 20
+# 整合mybatis
+mybatis:
+      mapperLocations: classpath:mybatis/mapper/*.xml
+      typeAliasesPackage: com.xwcommon.xw_common_web.beans
+# 整合logback 日志
+logging:
+  config: classpath:logback.xml
