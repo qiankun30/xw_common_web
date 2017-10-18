@@ -33,6 +33,7 @@ public class HelloController {
             logger.error("有异常");
             return "hello fail qiankun";
         }
+
         return "hello,qiankun";
     }
 }

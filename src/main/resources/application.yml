@@ -11,3 +11,9 @@ http:
       force: true
       charset: UTF-8
       enabled: true
+#pagehelper·ÖÒ³²å¼şÅäÖÃ
+pagehelper:
+         helperDialect: mysql
+         reasonable: true
+         supportMethodsArguments: true
+         params: count=countSql
