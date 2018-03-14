@@ -1,5 +1,6 @@
 package com.xwcommon.xw_common_web.controller;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import com.xwcommon.xw_common_web.beans.User;
 import com.xwcommon.xw_common_web.dao.UserMapper;
 import com.xwcommon.xw_common_web.service.UserService;
@@ -21,6 +22,7 @@ public class HelloController {
 
     @GetMapping(value="hello")
     public String say(){
+        System.out.println("2018_03_14_2");
         System.out.println("tsttttttt乾坤tttttttttttyyyyyyy1777111");
         logger.error("哈哈");
         logger.info("qinak");
