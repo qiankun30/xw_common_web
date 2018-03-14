@@ -22,7 +22,7 @@ public class HelloController {
 
     @GetMapping(value="hello")
     public String say(){
-        System.out.println("2018_03_14_2");
+        System.out.println("2018_03_14_2_23");
         System.out.println("tsttttttt乾坤tttttttttttyyyyyyy1777111");
         logger.error("哈哈");
         logger.info("qinak");
